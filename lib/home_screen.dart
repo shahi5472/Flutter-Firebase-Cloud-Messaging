@@ -1,5 +1,5 @@
+import 'package:fcm_notification_flutter/firebase_notification_handler.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_fcm_demo/firebase_notification_handler.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

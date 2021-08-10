@@ -1,4 +1,4 @@
-package com.s.m.shahi.flutter_fcm_demo;
+package com.example.fcm_notification_flutter;
 
 import io.flutter.embedding.android.FlutterActivity;
 

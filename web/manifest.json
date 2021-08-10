@@ -1,6 +1,6 @@
 {
-    "name": "flutter_fcm_demo",
-    "short_name": "flutter_fcm_demo",
+    "name": "fcm_notification_flutter",
+    "short_name": "fcm_notification_flutter",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

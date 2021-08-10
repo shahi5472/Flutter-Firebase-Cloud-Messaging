@@ -1,12 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.s.m.shahi.flutter_fcm_demo">
+    package="com.example.fcm_notification_flutter">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".Application"
         android:icon="@mipmap/ic_launcher"
-        android:label="Flutter FCM Demo">
+        android:label="FCM Notification Flutter">
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

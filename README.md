@@ -1,4 +1,4 @@
-# flutter_fcm_demo
+# fcm_notification_flutter
 
 A new Flutter project.
 

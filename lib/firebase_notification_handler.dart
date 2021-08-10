@@ -1,14 +1,18 @@
 import 'dart:io';
 
+import 'package:fcm_notification_flutter/controller/fcm_token_controller.dart';
+import 'package:fcm_notification_flutter/notification_handler.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_fcm_demo/notification_handler.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:get/get.dart';
 
 class FirebaseNotifications {
   FirebaseMessaging? _messaging;
   BuildContext? buildContext;
+
+  FCMTokenController controller = Get.find();
 
   void setupFirebase(BuildContext? context) {
     _messaging = FirebaseMessaging.instance;
@@ -31,7 +35,10 @@ class FirebaseNotifications {
     print('Settings ${settings.authorizationStatus}');
 
     _messaging!.getToken().then((value) {
-      print('My Token $value');
+      if (value != null) {
+        print('My Token $value');
+        controller.setFCMToken(token: value);
+      }
     });
 
     _messaging!
@@ -71,7 +78,7 @@ class FirebaseNotifications {
     });
   }
 
- static void showNotification(String? title, String? body) async {
+  static void showNotification(String? title, String? body) async {
     var androidChannel = AndroidNotificationDetails(
       'com.s.m.shahi.flutter_fcm_demo',
       'Flutter FCM Demo',

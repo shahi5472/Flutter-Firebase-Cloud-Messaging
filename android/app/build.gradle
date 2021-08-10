@@ -30,7 +30,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.s.m.shahi.flutter_fcm_demo"
+        applicationId "com.example.fcm_notification_flutter"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
@@ -46,11 +46,12 @@ android {
     }
 }
 
-flutter {
-    source '../..'
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:28.3.1')
+
+    implementation 'com.google.firebase:firebase-analytics:19.0.0'
 }
 
-dependencies {
-    //implementation 'com.google.firebase:firebase-messaging:22.0.0'
-    //implementation 'com.google.firebase:firebase-analytics:19.0.0'
+flutter {
+    source '../..'
 }
